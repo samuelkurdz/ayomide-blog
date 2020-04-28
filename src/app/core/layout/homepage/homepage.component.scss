@@ -1,0 +1,63 @@
+
+.intro {
+  width: 100%;
+  padding:2rem 1rem 0;
+  text-align: center;
+  margin: 0 auto;
+  background: #7267f2;
+}
+
+.intro img {
+  max-width: 100%;
+  width: 85%;
+  height: auto;
+  border-radius: 9px;
+}
+
+.intro .quickIntro {
+  width: 85%;
+  margin:4px auto 0;
+  padding: 1rem;
+  background: #130a7a;
+  line-height: 1.5;
+  font-size: 15.8px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 670px) {
+  .intro {
+    display: flex;
+    justify-content: space-around;
+
+    & > img {
+      width: 45%;
+      height: 400px;
+    }
+
+    &> .quickIntro {
+      width: 38vw;
+      margin: auto;
+      font-size: 16.7px;
+    }
+  }
+}
+
+
+.stories {
+  margin: auto;
+  text-align: center;
+
+}
+
+// blogssss
+/*PEN STYLES*/
+
+// * {
+//   box-sizing: border-box;
+// }
+
+// body {
+//   background: #f1f1f1;
+//   margin: 2rem;
+// }
+@import './cards';

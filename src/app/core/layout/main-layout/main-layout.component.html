@@ -1,0 +1,44 @@
+<nav class="navbar">
+  <div class="logo">
+    <h3>Ayo Akande</h3>
+  </div>
+
+  <div class="hamburger" id="menu"
+    (click)="toggleNav()"[ngClass]="{'hamHover': isNavOpen}"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" [ngClass]="{
+              'hide':!isNavOpen,
+              'active': isNavOpen
+                }">
+      <li><a href="#">Stories</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+  </ul>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <div>
+    <ul>
+      <li><a href="https://twitter.com/julesforrest">Twitter</a></li>
+      <li><a href="https://codepen.io/julesforrest">LinkedIn</a></li>
+      <li><a href="mailto:julesforrest@gmail.com">Email</a></li>
+      <!-- <li><a href="https://dribbble.com/julesforrest">Dribbble</a></li> -->
+      <!-- <li><a href="https://github.com/julesforrest">Github</a></li> -->
+      <li>
+        <p>👋</p>
+      </li>
+    </ul>
+  </div>
+  <p>
+    <span>Made with <span class="heart">♥</span> by Samuel Adebayo</span>
+  </p>
+</footer>
