@@ -1,15 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text&family=Indie+Flower&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
 }
 
-// font-family: 'Indie Flower', cursive;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
 body {
-  font-family: 'Bellota Text', cursive;
-  color: white;
-  background: #8c9aec;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.7s ease;
+}
+
+
+[data-theme="dark"] {
+  --bg-color: #000;
+  --text-color: #fff;	
 }

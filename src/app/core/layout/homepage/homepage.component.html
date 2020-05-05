@@ -1,6 +1,6 @@
 <div class="body">
   <div class="intro">
-    <img src="assets/images/ayo3.jpg" alt="Ayomide">
+    <img src="assets/images/ayo-desktop.jpg" alt="Ayomide">
 
     <div class="quickIntro">
       <h2>Meet Ayomide!</h2>
@@ -8,65 +8,56 @@
         Soluta consequatur doloribus totam, dicta officia deleniti dolorum nostrum
         assumenda numquam explicabo velit alias blanditiis voluptates,
       </p>
+
+      <button mat-flat-button color="accent">Learn More</button>
     </div>
 
   </div>
-  <img src="assets/images/wave.svg" alt="wave">
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path opacity="1" d="M0,64L80,85.3C160,107,320,149,480,144C640,139,800,85,960,58.7C1120,32,1280,32,1360,32L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg> -->
 
   <div class="stories">
     <h3>Latest Posts</h3>
 
-    <section>
-      <div class="blog-card">
-        <div class="meta">
-          <div class="photo" style="background-image: url(assets/images/bill.jpg)"></div>
-          <ul class="details">
-            <li class="author"><a href="#">John Doe</a></li>
-            <li class="date">Aug. 24, 2015</li>
-            <li class="tags">
-              <ul>
-                <li><a href="#">Learn</a></li>
-                <li><a href="#">Code</a></li>
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="description">
-          <h1>Working Remotely?</h1>
-          <h2>Opening a door to the future</h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-          <p class="read-more">
-            <a href="#">Read More</a>
+      <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/images/tree.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
           </p>
-        </div>
-      </div>
-      <div class="blog-card alt">
-        <div class="meta">
-          <div class="photo" style="background-image: url(assets/images/pandemic.jpg)"></div>
-          <ul class="details">
-            <li class="author"><a href="#">Jane Doe</a></li>
-            <li class="date">July. 15, 2015</li>
-            <li class="tags">
-              <ul>
-                <li><a href="#">Learn</a></li>
-                <li><a href="#">Code</a></li>
-                <li><a href="#">JavaScript</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="description">
-          <h1>Overcoming The Pandemic</h1>
-          <h2>What Technology are Necessary to Overcome the Pandemic</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-          <p class="read-more">
-            <a href="#">Read More</a>
+        </mat-card-content>
+        <mat-card-actions>
+          <!-- <button mat-button>LIKE</button> -->
+          <button mat-flat-button color="accent">Read</button>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Washington</mat-card-title>
+          <mat-card-subtitle>America's Capital</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/images/washington.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The America's Captial is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
           </p>
-        </div>
-      </div>
-    </section>
+        </mat-card-content>
+        <mat-card-actions>
+          <!-- <button mat-button>LIKE</button> -->
+          <button mat-flat-button color="accent">Read</button>
+        </mat-card-actions>
+      </mat-card>
+
 
   </div>
 </div>

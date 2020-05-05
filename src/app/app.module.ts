@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 import { CoreModule } from './core/core.module';
-import { FeaturesModule } from './features/features.module';
 
 import { AppComponent } from './app.component';
-
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    FeaturesModule,
-    CoreModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

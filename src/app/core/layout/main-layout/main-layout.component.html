@@ -1,38 +1,32 @@
-<nav class="navbar">
-  <div class="logo">
-    <h3>Ayo Akande</h3>
+<div class="navbar-component">
+  <!-- Class `area` is a container -->
+  <div class="navbar area">
+    <!-- Logo -->
+    <a href="/" class="brand">Ayo Akande</a>
+    <!-- List of links -->
+    <nav role="navigation" id="navigation" class="list" [ngClass]="{'-on': isNavOpen}">
+      <a href="#" class="item -link">blog</a>
+      <!-- <a href="#" class="item -link">reading</a> -->
+      <a [routerLink]="['/contact']" class="item -link">contact</a>
+      <a [routerLink]="['/about']" class="item -link">About</a>
+      <a class="item -link" id="theme-switcher" (click)="toggleColor($event)">switch</a>
+    </nav>
+    <!-- Button to toggle the display menu  -->
+    <button data-collapse data-target="#navigation" class="toggle" (click)="toggleNav()" [ngClass]="{'-active': isNavOpen}">
+      <!-- Hamburger icon -->
+      <span class="icon"></span>
+    </button>
   </div>
+</div>
 
-  <div class="hamburger" id="menu"
-    (click)="toggleNav()"[ngClass]="{'hamHover': isNavOpen}"
-  >
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <ul class="nav-links" [ngClass]="{
-              'hide':!isNavOpen,
-              'active': isNavOpen
-                }">
-      <li><a href="#">Stories</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About</a></li>
-  </ul>
-</nav>
-
-<main>
   <router-outlet></router-outlet>
-</main>
 
 <footer>
   <div>
     <ul>
-      <li><a href="https://twitter.com/julesforrest">Twitter</a></li>
-      <li><a href="https://codepen.io/julesforrest">LinkedIn</a></li>
-      <li><a href="mailto:julesforrest@gmail.com">Email</a></li>
-      <!-- <li><a href="https://dribbble.com/julesforrest">Dribbble</a></li> -->
-      <!-- <li><a href="https://github.com/julesforrest">Github</a></li> -->
+      <li><a href="https://twitter.com/sambayo_dev">Twitter</a></li>
+      <li><a href="https://LinkedIn.com/in/sambayo">LinkedIn</a></li>
+      <li><a href="mailto:sambayo28@gmail.com">Email</a></li>
       <li>
         <p>👋</p>
       </li>

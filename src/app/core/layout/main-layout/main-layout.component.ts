@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainLayoutComponent implements OnInit {
 
-  toggleClasses = ['hide', 'active'];
   isNavOpen: Boolean = false;
 
   constructor() { }
@@ -18,4 +17,14 @@ export class MainLayoutComponent implements OnInit {
   toggleNav() {
     this.isNavOpen = !this.isNavOpen;
   }
+
+  toggleColor(event) {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    // Switch between `dark` and `light`
+    let switchToTheme = currentTheme === "dark" ? "light" : "dark";
+    // Set our currenet theme to the new one
+    document.documentElement.setAttribute("data-theme", switchToTheme);
+  }
+
+
 }
