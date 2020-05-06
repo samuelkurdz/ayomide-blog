@@ -3,7 +3,6 @@
   padding: 1rem 2rem;
   text-align: center;
   margin: 0 auto;
-  // background: var(--text-color);
 }
 
 .intro img {
@@ -15,13 +14,13 @@
 }
 
 .intro .quickIntro {
-  width: 85%;
-  margin:4px auto 0;
-  // padding: 1rem;
-  // background: var(--bg-color);
+  margin: 4px auto 0;
+  font-weight: 600;
   line-height: 1.5;
-  font-size: 15.8px;
   border-radius: 5px;
+  font-size: x-large;
+  text-transform: capitalize;
+
 }
 
 @media screen and (min-width: 670px) {
@@ -29,15 +28,15 @@
     display: flex;
     justify-content: space-around;
 
-    & > img {
-      width: 45%;
-      height: 350px;
+    img {
+      width: 43%;
+      height: 335px;
     }
 
-    &> .quickIntro {
-      width: 38vw;
+    .quickIntro {
       margin: auto;
-      font-size: 16.7px;
+      font-size: xx-large;
+      padding: 21px;
     }
   }
 }
@@ -45,7 +44,7 @@
 @media screen and (min-width: 1000px) {
   .intro {
 
-    & > img {
+    img {
       width: 35%;
       height: 400px;
     }

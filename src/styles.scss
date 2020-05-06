@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text&family=Indie+Flower&display=swap');
 
 :root {
-  --bg-color: #fff;
-  --text-color: #000;
+  --bg-color: #f3f7f9;
+  --text-color: #444;
+  --card-bg-color: #fff;
+  --card-text-color: #000;
 }
 
 *,
@@ -24,8 +26,9 @@ body {
   transition: 0.7s ease;
 }
 
-
 [data-theme="dark"] {
-  --bg-color: #000;
-  --text-color: #fff;	
+  --bg-color: #0d2538;
+  --text-color: #fff;
+  --card-bg-color: #0f2d44;
+  --card-text-color: #fff;
 }
