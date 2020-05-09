@@ -28,14 +28,14 @@
       margin-bottom: 30px;
     }
 
-    // form {
-    //   text-align: center;
-    // }
+    form {
+      text-align: center;
+    }
   }
 
   .contact-right {
     flex-basis: 40%;
-    padding: 40px;
+    padding: 40px 25px;
     background: var(--card-text-color);
     color: var(--card-bg-color);
 

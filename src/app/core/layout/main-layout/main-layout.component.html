@@ -8,7 +8,7 @@
       <a href="#" class="item -link">blog</a>
       <a [routerLink]="['/contact']" class="item -link">contact</a>
       <a [routerLink]="['/about']" class="item -link">About</a>
-      <!-- <a class="item -link" id="theme-switcher" (click)="toggleColor($event)">switch</a> -->
+      <a class="item -link" id="theme-switcher" (click)="toggleColor($event)">switch</a>
     </nav>
     <!-- Button to toggle the display menu  -->
     <button data-collapse data-target="#navigation" class="toggle" (click)="toggleNav()" [ngClass]="{'-active': isNavOpen}">
