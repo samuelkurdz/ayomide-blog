@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MaterialModule } from '../material.module';
 import { FeaturesModule } from '../features/features.module';
@@ -19,6 +20,7 @@ import { HomepageComponent } from './layout/homepage/homepage.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MaterialModule,
     FeaturesModule,
     CoreRoutingModule,

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-homepage',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-
-  constructor() { }
+  // teams: any = [];
+  // data$: Observable<any>;
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    // this.data$ = this.http.get('api/comments');
+    // this.data$.subscribe(x => {
+    //   this.teams = [...x];
+    // })
   }
 
 }
