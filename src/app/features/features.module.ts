@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { MaterialModule } from '../material.module';
 import { FormsModule } from '@angular/forms';
+
+const routes: Routes= [
+  {path: 'contact', component: ContactComponent},
+  {path: 'about', component: AboutComponent}
+]
 
 @NgModule({
   declarations: [AboutComponent, ContactComponent],
@@ -13,10 +18,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     MaterialModule,
-    RouterModule.forChild([
-      {path: 'about', component: AboutComponent},
-      {path: 'contact', component: ContactComponent}
-    ])
+    RouterModule.forChild(routes)
   ]
 })
 
