@@ -6,7 +6,6 @@ import { createClient, Entry} from 'contentful';
 })
 
 export class ContentfulService {
-
   CONFIG = {
     space: 'juik9xk50dd4',
     accessToken: 'Vz7V8HB4qbbDqBNJRJJZYImzS0yWa-6SFoyYEdG0_-8',
@@ -27,5 +26,12 @@ export class ContentfulService {
       content_type: this.CONFIG.contentTypeIds.Blog
     }, query))
     .then(res => res.items);
+  }
+
+  getPost(postId): Promise<Entry<any>> {
+    return this.cdaClient.getEntries(Object.assign({
+     content_type: this.CONFIG.contentTypeIds.Blog
+    }, {'sys.id': postId}))
+      .then(res => res.items[0]);
   }
 }

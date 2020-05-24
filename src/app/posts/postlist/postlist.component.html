@@ -1,1 +1,23 @@
-<p>storylist works!</p>
+<div class="cards-container">
+  <mat-card class="card" *ngFor="let post of Posts">
+    <img
+      mat-card-image
+      src="{{post.fields.postImage.fields.file.url}}"
+      alt="{{post.fields.postImage.fields.title}}"
+    />
+    <mat-card-content>
+      <div [innerHTML]="post.fields.summary | mdToHtml"></div>
+    </mat-card-content>
+    <div class="header">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{post.fields.title | titlecase}}</mat-card-title>
+        <mat-card-subtitle>{{post.fields.publishedDate | date}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-flat-button color="accent" (click)="readPost(post.sys.id)">Read</button>
+        <!-- <p>{{post.fields.readTime}} Read</p> -->
+      </mat-card-actions>
+    </div>
+  </mat-card>
+</div>

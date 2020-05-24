@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { ContentfulService } from 'src/app/contentful.service';
+import { Entry } from 'contentful';
 
 @Component({
   selector: 'app-homepage',
@@ -8,15 +8,15 @@ import { Observable, of } from 'rxjs';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-  // teams: any = [];
-  // data$: Observable<any>;
-  constructor(private http: HttpClient) { }
+  shortPosts: Entry<any>[] = [];
+
+  constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit(): void {
-    // this.data$ = this.http.get('api/comments');
-    // this.data$.subscribe(x => {
-    //   this.teams = [...x];
-    // })
+    this.contentfulService.getProducts()
+    .then((posts) => {
+      this.shortPosts = posts.slice(3);
+    })
   }
 
 }

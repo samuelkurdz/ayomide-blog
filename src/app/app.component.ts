@@ -9,20 +9,11 @@ import { Entry } from 'contentful';
 })
 export class AppComponent implements OnInit {
   title = 'Temp';
-  private products: Entry<any>[] = [];
 
-  constructor(private contentfulService: ContentfulService) { }
+  constructor() { }
 
   ngOnInit() {
-    // this.contentfulService.getProducts()
-    // .then((products) => {
-    //   this.products = products;
-    //   this.showReturns()
-    // })
+
   }
 
-  showReturns() {
-    console.log(this.products[0]);
-    console.log(this.products[1])
-  }
 }

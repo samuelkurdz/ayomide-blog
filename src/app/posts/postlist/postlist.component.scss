@@ -1,0 +1,47 @@
+.card {
+  max-width: 400px;
+  margin-bottom: 2.5rem;
+  background: var(--card-bg-color);
+  color: var(--card-text-color);
+  box-shadow: 1px 1px 5px 0 rgba(0,0,0,.02), 1px 1px 15px 0 rgba(0,0,0,.03);
+  transition: transform .3s,background-color .3s,box-shadow .6s;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-card-subtitle {
+  color: var(--card-text-color);
+}
+.example-header-image {
+  background-image: url("/../../assets/images/ayo-small.jpg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 630px) {
+  .card {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(4, 1fr);
+    column-gap: 50px;
+    row-gap: 50px;
+
+    .card {
+      max-width: 350px;
+      margin-right: 3rem;
+    }
+  }
+}

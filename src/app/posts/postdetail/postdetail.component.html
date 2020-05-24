@@ -1,1 +1,14 @@
-<p>postdetail works!</p>
+<div class="post-body" *ngIf="showPost">
+  <h2>{{post.fields.title}}</h2>
+
+  <img
+    src="{{post.fields.postImage.fields.file.url}}"
+    alt="{{post.fields.postImage.fields.title}}"
+  />
+  <p>
+    Published Date: {{post.fields.publishedDate}}
+  </p>
+
+  <div class="post-content" [innerHTML]="post.fields.post | mdToHtml"></div>
+
+</div>

@@ -1,0 +1,24 @@
+.post-body {
+  text-align: center;
+  padding: 1rem 1.5rem;
+
+  h2 {
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  p {
+    text-align: start;
+  }
+
+  .post-content {
+    text-align: start;
+    line-height: 1.4;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+}

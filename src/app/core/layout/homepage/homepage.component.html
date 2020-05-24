@@ -1,101 +1,41 @@
 <div class="body">
+  
   <div class="intro">
     <img src="assets/images/ayo-desktop.jpg" alt="Ayomide">
-
     <div class="quickIntro">
       <h2>Ayomide Beckons!</h2>
       <p>
         Shall we grow together?
       </p>
-
       <button mat-flat-button color="accent">Learn More</button>
     </div>
-
   </div>
  
   <div class="posts">
     <h3>Latest Posts</h3>
-
     <div class="cards-container">
-      <mat-card class="card">
+      <mat-card class="card" *ngFor="let post of shortPosts">
         <img
           mat-card-image
-          src="https://images.pexels.com/photos/3972462/pexels-photo-3972462.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt="Photo of a Tree"
+          src="{{post.fields.postImage.fields.file.url}}"
+          alt="{{post.fields.postImage.fields.title}}"
         />
         <mat-card-content>
-          <p>
-            March seemed like it was going to last forever.
-            April raced like it would be swallowed up by a predator if it slowed down for a single second.
-            May showed up elegantly holding so much promise and fears simultaneously.
-          </p>
+          <div [innerHTML]="post.fields.summary | mdToHtml"></div>
         </mat-card-content>
         <div class="header">
           <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Let Hope Rise Again</mat-card-title>
-            <mat-card-subtitle>May 1, 2020</mat-card-subtitle>
+            <mat-card-title>{{post.fields.title | titlecase}}</mat-card-title>
+            <mat-card-subtitle>{{post.fields.publishedDate | date}}</mat-card-subtitle>
           </mat-card-header>
           <mat-card-actions>
             <button mat-flat-button color="accent">Read</button>
-          </mat-card-actions>
-        </div>
-      </mat-card>
-
-      <mat-card class="card">
-        <img 
-          mat-card-image
-          src="https://images.pexels.com/photos/1157399/pexels-photo-1157399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt="Photo of a Shiba Inu"
-        />
-        <mat-card-content>
-          <p>
-            The America's Captial is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <div class="header">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Motherhood</mat-card-title>
-            <mat-card-subtitle>March 27, 2020</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-actions>
-            <button mat-flat-button color="accent">Read</button>
-          </mat-card-actions>
-        </div>
-      </mat-card>
-
-      <mat-card class="card">
-        <img 
-          mat-card-image
-          src="https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt="Photo of a Shiba Inu"
-        />
-        <mat-card-content>
-          <p>
-            “You are the wonder in wonder park “.<br>
-
-            This was my favourite line from Wonder Park, an animation I saw a few days ago. 
-            Don’t you just love animations? If you don’t, I’m actually judging you right now😏. 
-            I mean how can you not?!
-          </p>
-        </mat-card-content>
-        <div class="header">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Wonder Park</mat-card-title>
-            <mat-card-subtitle>August 5, 2019</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-actions>
-            <button mat-flat-button color="accent">Read</button>
+            <!-- <p>{{post.fields.readTime}} Read</p> -->
           </mat-card-actions>
         </div>
       </mat-card>
     </div>
-      
-
-
   </div>
+
 </div>
