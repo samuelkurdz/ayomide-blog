@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   }
 
   showReturns() {
-    console.log(this.products[0].fields.title)
+    console.log(this.products[0]);
+    console.log(this.products[1])
   }
 }
