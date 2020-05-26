@@ -5,9 +5,9 @@
     src="{{post.fields.postImage.fields.file.url}}"
     alt="{{post.fields.postImage.fields.title}}"
   />
-  <p>
+  <h3>
     Published Date: {{post.fields.publishedDate}}
-  </p>
+  </h3>
 
   <div class="post-content" [innerHTML]="post.fields.post | mdToHtml"></div>
 

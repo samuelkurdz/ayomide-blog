@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MainLayoutComponent implements OnInit {
 
   isNavOpen: Boolean = false;
+  isLight: Boolean = false;
 
   constructor() { }
 
@@ -19,10 +20,13 @@ export class MainLayoutComponent implements OnInit {
   }
 
   toggleColor(event) {
+    // change svg
+    this.isLight = !this.isLight;
+
+    // Change our current theme
     const currentTheme = document.documentElement.getAttribute("data-theme");
     // Switch between `dark` and `light`
     let switchToTheme = currentTheme === "dark" ? "light" : "dark";
-    // Set our currenet theme to the new one
     document.documentElement.setAttribute("data-theme", switchToTheme);
   }
 

@@ -1,24 +1,44 @@
 .post-body {
-  text-align: center;
   padding: 1rem 1.5rem;
+  text-align: center;
 
   h2 {
     font-weight: 500;
     font-size: 22px;
   }
 
-  p {
+  img {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+  }
+
+  h3 {
+    font-weight: 500;
     text-align: start;
+    
   }
 
   .post-content {
+    line-height: 1.5;
     text-align: start;
-    line-height: 1.4;
   }
 }
 
-img {
-  max-width: 100%;
-  width: 300px;
-  height: auto;
+@media (min-width: 768px) {
+  .post-body {
+    img {
+      width: 30%;
+    }
+  
+    h3 {
+      margin-left: 15%;
+    }
+    .post-content {
+      line-height: 1.5;
+      text-align: justify;
+      margin: 0 auto;
+      width: 70%;
+    }
+  }
 }

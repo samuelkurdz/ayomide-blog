@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text&family=Indie+Flower&display=swap');
-// "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
 
 :root {
   --bg-color: #f3f7f9;
   --text-color: #444;
   --card-bg-color: #fff;
   --card-text-color: #000;
+  --hover-color: #ff4081;
 }
 
 *,
@@ -27,9 +27,15 @@ body {
   transition: 0.7s ease;
 }
 
+.mat-flat-button.mat-accent, .mat-raised-button.mat-accent,
+.mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  background-color: var(--hover-color) !important;
+}
+
 [data-theme="dark"] {
   --bg-color: #0d2538;
   --text-color: #fff;
   --card-bg-color: #0f2d44;
   --card-text-color: #fff;
+  --hover-color: #69f0ae;
 }
